@@ -26,6 +26,16 @@ More information regarding the requirements can be found [here](https://microk8s
 ## Checking if Microk8s is running
 `microk8s status --wait-ready`
 
+## Enabling add-ons 
+As Microk8s is barebones, many of the services need to be enabled. A good add-on to enable is the `dashboard`
+
+`microk8s enable dns dashboard storage`
+
+Similarly, you can disable it using
+
+`microk8s disable dns dashboard storage`
+
+
 # Kubernetes using Microk8s
 Running Kubernetes on Microk8s is simply done by appending `kubectl` to the `microk8s` command. This also means that most, if not all of `kubectl` commands will work in the same manner. 
 
