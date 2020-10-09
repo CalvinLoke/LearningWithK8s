@@ -45,8 +45,19 @@ If you would like, you could alias `microk8s.kubectl`, assuming that you do not 
 
 # Useful microk8s commands
 
+Note that kubectl commands *should* work. 
+
+## Getting all the namespaces
+`microk8s kubectl get all --all-namespaces`
+
 ## Resetting the whole cluster
 `microk8s.reset`
 
+## Getting the status 
+`microk8s.status`
+
+## Official kubectl cheat sheet
+
+[Here is the link](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
 
