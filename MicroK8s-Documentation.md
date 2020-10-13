@@ -27,14 +27,13 @@ More information regarding the requirements can be found [here](https://microk8s
 `microk8s status --wait-ready`
 
 ## Enabling add-ons 
-As Microk8s is barebones, many of the services need to be enabled. A good add-on to enable is the `dashboard`
+As Microk8s is barebones, many of the services need to be enabled. They can be enabled using the `microk8s enable` command. 
 
 `microk8s enable dns dashboard storage`
 
 Similarly, you can disable it using
 
 `microk8s disable dns dashboard storage`
-
 
 # Kubernetes using Microk8s
 Running Kubernetes on Microk8s is simply done by appending `kubectl` to the `microk8s` command. This also means that most, if not all of `kubectl` commands will work in the same manner. 
@@ -47,13 +46,18 @@ If you would like, you could alias `microk8s.kubectl`, assuming that you do not 
 
 Note that kubectl commands *should* work. 
 
+## Enabling MetalLB LoadBalancer for the microk8s kubernetes cluster
+`microk8s enable metallb`
+
+`<IP-address range>-<IP-address range>`
+
 ## Getting all the namespaces
 `microk8s kubectl get all --all-namespaces`
 
 ## Resetting the whole cluster
 `microk8s.reset`
 
-## Getting the status 
+## Getting the status of microk8s 
 `microk8s.status`
 
 ## Official kubectl cheat sheet
