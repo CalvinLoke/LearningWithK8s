@@ -51,5 +51,7 @@ This section will contain important commands that are commonly used during devel
 
 `kubectl delete pods/services/deployments --all`
 
+## Exec into the container/pod
+`kubectl exec -it <pod-name> bash`
 
 
