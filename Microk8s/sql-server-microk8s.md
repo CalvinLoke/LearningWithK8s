@@ -1,7 +1,7 @@
 # SQL-Server Deployment in Microk8s
 This document will contain the necessary steps required to deploy an SQL Server in Kubernetes using Microk8s. Hence, it is assumed that you have already installed microk8s.
 
-# Creating the deployment file
+## Creating the deployment file
 
 ```
 kind: PersistentVolumeClaim
@@ -67,3 +67,10 @@ spec:
 ```
 
 Note that this deployment file should not be used in development due to the password being exposed. In development, do change the raw text value of the password to a secret. A detailed guide can be found [here](https://docs.microsoft.com/en-us/sql/linux/tutorial-sql-server-containers-kubernetes?view=sql-server-ver15) under the *Create an SA Password* section. 
+
+## Applying the deployment file
+`microk8s kubectl apply -f sqldeployment.yml`
+
+## Checking that a pod has been created 
+`microk8s kubectl get pods`
+
