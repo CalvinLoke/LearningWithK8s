@@ -30,4 +30,4 @@ spec:
           value: "minio123"
         ports:
         - containerPort: 9000
-          hostPort: 9000
+          hostPort: 31573
