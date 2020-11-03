@@ -1,8 +1,8 @@
 apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
-namespace: minio
 kind: Deployment
 metadata:
   # This name uniquely identifies the Deployment
+  namespace: minio
   name: minio-deployment
 spec:
   selector:
@@ -31,4 +31,4 @@ spec:
           value: "minio123"
         ports:
         - containerPort: 9000
-          hostPort: 31573
+          hostPort: 9000
