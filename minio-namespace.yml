@@ -1,5 +1,5 @@
 # Creating the minio-namespace
 apiVersion: v1
-kind: namespace
+kind: Namespace
 metadata:
     name: minio-namespace
